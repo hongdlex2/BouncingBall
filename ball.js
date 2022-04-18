@@ -1,12 +1,12 @@
 export class Ball{
-    constructor(stageWidth, stageheight, radius, speed){
+    constructor(stageWidth, stageHeight, radius, speed){
         this.radius = radius;
         this.vx = speed;
         this.vy = speed;
 
         const diameter = this.radius * 2;
         this.x = diameter + (Math.random() * stageWidth - diameter);
-        this.y = diameter + (Math.random() * stageheight - diameter);
+        this.y = diameter + (Math.random() * stageHeight - diameter);
     }
 
     draw(ctx, stageWidth, stageHeight){
@@ -23,14 +23,20 @@ export class Ball{
 
     bounceWindow(stageWidth, stageHeight){
         const minX = this.radius;
-        const maxX = this.stageWidth - this.radius;
+        const maxX = stageWidth - this.radius;
         const minY = this.radius;
-        const maxY = this.stageHeight - this.radius; 
+        const maxY = stageHeight - this.radius; 
+
+        5:24
+        https://www.youtube.com/watch?v=sLCiI6d5vTM
 
         if(this.x <= minX || this.x >= maxX){
+            console.log("hi");
             this.vx *= -1;
             this.x += this.vx;
+            
         }else if(this.y <= minY || this.y >= maxY){
+            console.log("hello");
             this.vy *= -1;
             this.y += this.vy;
         }
