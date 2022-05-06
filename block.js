@@ -1,5 +1,6 @@
 export class Block{
     constructor(width, height, x, y){
+        //가로, 세로, 
         this.width = width;
         this.height = height;
         this.x = x;
@@ -11,8 +12,9 @@ export class Block{
     draw(ctx){
         const xGap = 80;
         const yGap = 80;
-
+        // 입체적인 표현하기 위한 간격
         ctx.fillStyle = '#ff384e';
+        // 블럭 가로색
         ctx.beginPath();
         ctx.rect(this.x, this.y, this.width, this.height);
         ctx.fill();
