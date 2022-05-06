@@ -20,8 +20,10 @@ class app{
         this.resize();
 
         this.ball = new Ball(this.stageWidth, this.stageHeight, 30, 5);
+        this.ball2 = new Ball(this.stageWidth, this.stageHeight, 30, 5);
         // ball 생성
         this.block = new Block(700, 30, 300, 450);
+        // this.block2 = new Block(300, 30, 500, 150);
         // block 생성
 
         window.requestAnimationFrame(this.animate.bind(this));
@@ -54,9 +56,13 @@ class app{
 
 
         this.block.draw(this.ctx);
+        // this.block2.draw(this.ctx)
         // Block의 draw 함수를 이용해 block을 그림
         this.ball.draw(this.ctx, this.stageWidth, this.stageHeight, this.block);
-        // Ball의 draw 함수를 이용해 block을 그림
+        this.ball2.draw(this.ctx, this.stageWidth, this.stageHeight, this.block);
+        // this.ball.draw(this.ctx, this.stageWidth, this.stageHeight, this.block2);
+        // this.ball2.draw(this.ctx, this.stageWidth, this.stageHeight, this.block2);
+        // Ball의 draw 함수를 이용해 ball을 그림
     }
 
 }
