@@ -69,4 +69,7 @@ class app{
 
 window.onload = () => {
     new app();
-};//clonetest2
+};
+
+
+// clone test
