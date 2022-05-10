@@ -70,3 +70,6 @@ class app{
 window.onload = () => {
     new app();
 };
+
+
+// clone test
